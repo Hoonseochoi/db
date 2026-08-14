@@ -23,12 +23,6 @@ a { text-decoration: none; }
 	background: #081f3e;
 }
 
-.visual img { display: block; width: 100%; }
-
-/* 원본 1번 이미지 상단의 광고주 로고/네비 밴드(422px 중 142px)를 잘라냄 */
-.visual__crop { overflow: hidden; }
-.visual__crop img { margin-top: -20.88%; }
-
 /* ===== 채널 브랜드 헤더 ===== */
 .brand-hero {
 	position: relative;
@@ -77,6 +71,540 @@ a { text-decoration: none; }
 	letter-spacing: -0.05em;
 }
 .brand-hero__tagline em { font-style: normal; color: #1a9e8f; }
+
+/* =========================================================
+ * 세일즈 섹션
+ * 원본 이미지 6장의 내용을 HTML/CSS로 재구성 (자체 소재)
+ * ======================================================= */
+.sec { padding: 38px 22px; }
+.sec--dark { background: #14304f; color: #fff; }
+.sec--light { background: #f4fbfa; color: #14304f; }
+
+.sec__title {
+	font-size: 25px;
+	font-weight: 900;
+	line-height: 1.35;
+	letter-spacing: -0.05em;
+	text-align: center;
+	color: #14304f;
+}
+.sec__title--light { color: #fff; }
+.sec__title b { color: #1a9e8f; }
+.sec__title mark {
+	background: #ffd400;
+	color: #14304f;
+	padding: 1px 8px;
+	border-radius: 4px;
+}
+
+.eyebrow {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: -0.05em;
+	color: #a8c4dd;
+	margin-bottom: 10px;
+}
+.eyebrow b { color: #ffd400; font-weight: 900; }
+
+.source {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 11px;
+	color: #7b8f9e;
+	letter-spacing: -0.03em;
+}
+.note {
+	margin-top: 16px;
+	font-size: 11px;
+	line-height: 1.7;
+	color: #7b8f9e;
+	text-align: center;
+	letter-spacing: -0.03em;
+}
+.note--light { color: #8ba3bb; }
+.note--top { margin: 10px 0 20px; }
+
+/* --- 1. 후킹 --- */
+.sec--hook { padding: 46px 22px 44px; }
+.hook__title {
+	text-align: center;
+	font-size: 27px;
+	font-weight: 900;
+	line-height: 1.3;
+	letter-spacing: -0.05em;
+}
+.hook__title strong {
+	display: block;
+	margin-top: 6px;
+	font-size: 52px;
+	font-weight: 900;
+	color: #ffd400;
+	line-height: 1.05;
+}
+.hook__title em {
+	font-style: italic;
+	font-size: 34px;
+	color: #fff;
+	margin-left: 8px;
+}
+.hook__sub {
+	margin-top: 18px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: -0.05em;
+	color: #cfe0f0;
+}
+.hook__sub b {
+	color: #14304f;
+	background: #fff;
+	padding: 2px 8px;
+	border-radius: 4px;
+	font-weight: 900;
+}
+
+/* --- 2. 발생 확률 --- */
+.statgrid {
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+}
+.statgrid li {
+	flex: 1;
+	padding: 20px 8px;
+	border-radius: 12px;
+	background: #fff;
+	border: 2px solid #d9ebe8;
+	text-align: center;
+}
+.statgrid__label {
+	display: block;
+	font-size: 13px;
+	font-weight: 700;
+	color: #7b8f9e;
+	margin-bottom: 4px;
+}
+.statgrid strong {
+	font-size: 34px;
+	font-weight: 900;
+	color: #14304f;
+	letter-spacing: -0.04em;
+}
+.statgrid em { font-style: normal; font-size: 19px; color: #1a9e8f; }
+
+/* 견적서 카드 */
+.doc {
+	margin-top: 22px;
+	border-radius: 12px;
+	background: #fff;
+	border: 1px solid #d9ebe8;
+	overflow: hidden;
+	box-shadow: 0 4px 14px rgba(20, 48, 79, 0.07);
+}
+.doc__head {
+	padding: 13px 16px;
+	background: #14304f;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 900;
+	letter-spacing: -0.04em;
+}
+.doc__meta {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 12px 16px;
+	border-bottom: 1px dashed #d9ebe8;
+}
+.doc__meta > div { width: 50%; padding: 4px 0; font-size: 12.5px; }
+.doc__meta dt { display: inline; color: #7b8f9e; }
+.doc__meta dt::after { content: ' : '; }
+.doc__meta dd { display: inline; color: #14304f; font-weight: 700; }
+
+.doc__label {
+	padding: 12px 16px 6px;
+	font-size: 12px;
+	font-weight: 900;
+	color: #1a9e8f;
+}
+.doc__list { padding: 0 16px 16px; }
+.doc__list li {
+	position: relative;
+	padding-left: 14px;
+	margin-bottom: 6px;
+	font-size: 12.5px;
+	line-height: 1.5;
+	color: #2c3e50;
+	letter-spacing: -0.04em;
+}
+.doc__list li::before {
+	content: '';
+	position: absolute;
+	left: 2px;
+	top: 7px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #1a9e8f;
+}
+.doc__list span { display: block; font-size: 11px; color: #7b8f9e; }
+
+/* --- 3. 상황 예시 (대화) --- */
+.talk { margin-top: 24px; }
+.talk__row {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+.talk__row--right { flex-direction: row-reverse; }
+
+.talk__who {
+	flex: 0 0 auto;
+	margin-top: 4px;
+	padding: 4px 8px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 900;
+	letter-spacing: -0.04em;
+}
+.talk__who--doc { background: #1a9e8f; color: #fff; }
+.talk__who--pat { background: #ffd400; color: #14304f; }
+
+.bubble {
+	position: relative;
+	flex: 1;
+	padding: 14px 16px;
+	border-radius: 14px;
+	background: #fff;
+	color: #14304f;
+	text-align: center;
+}
+.bubble--pat { background: #e8f0f8; }
+.bubble__sm { font-size: 12px; color: #5d7189; letter-spacing: -0.04em; }
+.bubble__lg {
+	font-size: 15px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	line-height: 1.5;
+}
+.bubble__lg .cost { color: #e03b52; }
+.bubble__hl {
+	display: inline-block;
+	margin-top: 6px;
+	padding: 4px 10px;
+	border-radius: 4px;
+	background: #ffd400;
+	font-size: 15px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+}
+
+.total {
+	margin-top: 20px;
+	padding: 18px;
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.08);
+	border: 2px solid #ffd400;
+	text-align: center;
+}
+.total span { display: block; font-size: 14px; font-weight: 700; color: #cfe0f0; }
+.total strong {
+	display: block;
+	margin-top: 2px;
+	font-size: 40px;
+	font-weight: 900;
+	color: #ffd400;
+	letter-spacing: -0.04em;
+}
+
+/* --- 4. 급여 / 비급여 --- */
+.cover { display: flex; gap: 8px; }
+.cover__col {
+	flex: 1;
+	padding: 14px 10px 16px;
+	border-radius: 12px;
+	background: #fff;
+}
+.cover__col--in { border: 2px solid #c3d5e6; }
+.cover__col--out { border: 2px solid #e8a0ad; background: #fdf5f7; }
+
+.cover__tag {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 4px 12px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 900;
+}
+.cover__tag--in { background: #14304f; color: #fff; }
+.cover__tag--out { background: #e03b52; color: #fff; }
+.cover__tag--out b {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 3px;
+	border-radius: 50%;
+	background: #fff;
+	color: #e03b52;
+	font-size: 11px;
+	line-height: 14px;
+	text-align: center;
+}
+.cover__col ul { text-align: left; }
+.cover__col li {
+	margin-bottom: 6px;
+	font-size: 12.5px;
+	color: #445a6e;
+	letter-spacing: -0.04em;
+}
+.cover__col li b { color: #14304f; font-weight: 900; }
+.cover__hr {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px dashed #e8a0ad;
+}
+
+.alarm {
+	margin-top: 18px;
+	padding: 18px;
+	border-radius: 12px;
+	background: #e03b52;
+	color: #fff;
+	text-align: center;
+}
+.alarm__top { font-size: 13px; font-weight: 700; color: #ffd8de; }
+.alarm__top b { color: #fff; }
+.alarm__main {
+	margin: 4px 0 6px;
+	font-size: 28px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+}
+.alarm__main b { color: #ffd400; }
+.alarm__sub { font-size: 13px; font-weight: 700; letter-spacing: -0.04em; }
+
+.punch {
+	margin-top: 16px;
+	text-align: center;
+	font-size: 19px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	color: #14304f;
+}
+.punch b { color: #e03b52; }
+.punch--mark { margin-top: 6px; }
+.punch--mark mark {
+	background: #e03b52;
+	color: #fff;
+	padding: 3px 10px;
+	border-radius: 4px;
+}
+
+.trend {
+	margin-top: 26px;
+	padding: 18px 14px;
+	border-radius: 12px;
+	background: #14304f;
+}
+.trend__head {
+	margin-bottom: 14px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 700;
+	color: #8ba3bb;
+	letter-spacing: -0.03em;
+}
+.trend__steps { display: flex; align-items: stretch; gap: 6px; }
+.trend__steps li {
+	position: relative;
+	flex: 1;
+	padding: 12px 6px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.1);
+	text-align: center;
+}
+.trend__steps li + li::before {
+	content: '›';
+	position: absolute;
+	left: -8px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #8ba3bb;
+	font-size: 14px;
+}
+.trend__steps b {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 14px;
+	font-weight: 900;
+	color: #ffd400;
+	letter-spacing: -0.05em;
+}
+.trend__steps span {
+	font-size: 11px;
+	line-height: 1.5;
+	color: #cfe0f0;
+	letter-spacing: -0.04em;
+}
+
+/* --- 5. 상품 / 보험료 --- */
+.price {
+	margin-top: 22px;
+	padding: 18px;
+	border-radius: 12px;
+	background: #fff;
+	border: 3px solid #ffd400;
+	text-align: center;
+}
+.price__label { font-size: 13px; font-weight: 700; color: #5d7189; }
+.price__value {
+	margin: 2px 0 6px;
+	font-size: 40px;
+	font-weight: 900;
+	color: #14304f;
+	letter-spacing: -0.05em;
+}
+.price__value em { font-style: normal; font-size: 20px; margin-left: 2px; }
+.price__cond { font-size: 11.5px; font-weight: 700; color: #1a9e8f; letter-spacing: -0.04em; }
+
+.rate {
+	width: 100%;
+	margin-top: 14px;
+	border-collapse: collapse;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.rate th, .rate td {
+	padding: 11px 6px;
+	text-align: center;
+	font-size: 13px;
+	letter-spacing: -0.04em;
+}
+.rate thead th {
+	background: #3a6fb8;
+	color: #fff;
+	font-weight: 900;
+	font-size: 13px;
+}
+.rate tbody th { background: #eef4fa; color: #14304f; font-weight: 900; }
+.rate tbody td { color: #2c3e50; border-bottom: 1px solid #e8eef5; }
+.rate__on th, .rate__on td { background: #fff8d6; font-weight: 900; color: #14304f; }
+
+.big { margin-top: 30px; text-align: center; }
+.big__eyebrow { font-size: 14px; font-weight: 700; color: #ffd400; letter-spacing: -0.05em; }
+.big__main {
+	margin: 4px 0 8px;
+	font-size: 54px;
+	font-weight: 900;
+	line-height: 1.05;
+	letter-spacing: -0.05em;
+}
+.big__main em { font-style: normal; font-size: 22px; vertical-align: super; margin-right: 2px; }
+.big__main span { font-size: 30px; margin-left: 6px; }
+.big__sub {
+	font-size: 17px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	color: #fff;
+}
+.big__sub b { color: #ffd400; }
+.big__cond { margin-top: 6px; font-size: 11.5px; color: #8ba3bb; letter-spacing: -0.04em; }
+
+.panel {
+	margin-top: 20px;
+	padding: 16px;
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	text-align: center;
+}
+.panel__head {
+	font-size: 15px;
+	font-weight: 900;
+	color: #ffd400;
+	letter-spacing: -0.05em;
+}
+.panel__body {
+	margin-top: 8px;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #e4edf6;
+	letter-spacing: -0.04em;
+}
+.panel__body b { font-size: 17px; font-weight: 900; color: #fff; }
+.panel__body span { font-size: 12px; color: #8ba3bb; }
+
+.panel--star { background: rgba(255, 255, 255, 0.06); }
+.panel__lead {
+	margin-top: 8px;
+	font-size: 13px;
+	line-height: 1.7;
+	color: #e4edf6;
+	letter-spacing: -0.04em;
+}
+.panel__lead mark {
+	background: #ffd400;
+	color: #14304f;
+	padding: 1px 6px;
+	border-radius: 3px;
+	font-weight: 900;
+}
+.spec { margin-top: 14px; text-align: left; }
+.spec li {
+	margin-bottom: 8px;
+	padding-left: 12px;
+	position: relative;
+	font-size: 12.5px;
+	line-height: 1.6;
+	color: #cfe0f0;
+	letter-spacing: -0.04em;
+}
+.spec li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 8px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #ffd400;
+}
+.spec b { color: #fff; font-weight: 900; margin-right: 4px; }
+.spec span { color: #8ba3bb; font-size: 11.5px; }
+
+.panel__foot {
+	margin-top: 14px;
+	padding: 11px;
+	border-radius: 8px;
+	background: #ffd400;
+	color: #14304f;
+	font-size: 14.5px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+}
+
+/* --- 6. 신청 유도 --- */
+.sec--cta {
+	padding: 34px 22px 30px;
+	background: #0f2540;
+	text-align: center;
+}
+.cta__title {
+	font-size: 27px;
+	font-weight: 900;
+	color: #fff;
+	letter-spacing: -0.05em;
+}
+.cta__title b { color: #ffd400; }
+.cta__sub {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #a8c4dd;
+	letter-spacing: -0.05em;
+}
 
 /* ===== 폼 ===== */
 .apply { background: #081f3e; }
@@ -228,8 +756,21 @@ a { text-decoration: none; }
 	border-bottom: 3px solid #fff;
 	text-align: center;
 }
-.submit-wrap img { width: 90%; cursor: pointer; }
-.submit-wrap img.is-loading { opacity: 0.5; cursor: default; }
+.submit-btn {
+	width: 90%;
+	padding: 17px 10px;
+	border: 3px solid #d9a900;
+	border-radius: 10px;
+	background: linear-gradient(#ffdc3d, #f5c400);
+	color: #1a1a1a;
+	font-size: 22px;
+	font-weight: 900;
+	letter-spacing: -0.06em;
+	box-shadow: 0 3px 0 #c79f00;
+}
+.submit-btn span { font-size: 18px; }
+.submit-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #c79f00; }
+.submit-btn.is-loading { opacity: 0.55; cursor: default; }
 
 /* ===== 푸터 ===== */
 .site-footer { background: #fff; }
