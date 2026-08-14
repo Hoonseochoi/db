@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="color-scheme" content="light only">
+	<meta name="supported-color-schemes" content="light">
+	<title>보답하는 유니 | 암보험 무료 비교견적</title>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="stylesheet" href="css/style.css">
+	<!--
+		[트래킹 픽셀 자리]
+		GA4 / Meta Pixel / TikTok Pixel / 당근 Pixel 스니펫을 여기에 붙여넣으세요.
+		원본 페이지의 픽셀 ID는 광고주 계정이라 복제하지 않았습니다.
+		전환 이벤트는 js/app.js 의 fireConversion() 에서 호출됩니다.
+	-->
+</head>
+<body>
+
+<div class="container">
+
+	<!-- ===== 채널 브랜드 헤더 ===== -->
+	<header class="brand-hero">
+		<div class="brand-hero__badges">
+			<span class="badge">좋아요 <b>♥</b></span>
+			<span class="badge">구독 <b>♥</b></span>
+		</div>
+		<img class="brand-hero__wordmark" src="img/logo_wordmark.png" alt="보답하는 유니">
+		<p class="brand-hero__tagline">&ldquo;워킹맘의 솔직한 <em>보험&amp;육아</em> 이야기&rdquo;</p>
+	</header>
+
+	<!-- ===== 세일즈 이미지 영역 ===== -->
+	<section class="visual">
+		<!-- 원본 상단 광고주 로고/네비 밴드(상단 142/422px)는 CSS로 잘라냄 -->
+		<div class="visual__crop">
+			<img src="img/cancer_01.jpg" alt="연간 암치료비 1.6억, 비급여 산정특례자도 100% 자부담">
+		</div>
+		<img src="img/cancer_02.jpg" alt="기대수명내 암 확률 남자 39.1% / 여자 36%">
+		<img src="img/cancer_03.jpg" alt="암보험 보장 안내">
+		<img src="img/cancer_04.jpg" alt="암보험 보장 안내">
+		<img src="img/cancer_05.jpg" alt="암보험 보장 안내">
+		<img src="img/cancer_06.jpg" alt="New암보험 무료 비교견적">
+	</section>
+
+	<!-- ===== DB 수집 폼 ===== -->
+	<section class="apply" id="apply">
+		<form id="leadForm" autocomplete="off" novalidate>
+
+			<div class="apply-inner">
+
+				<!-- 이름 -->
+				<div class="input_wrap">
+					<input type="text" id="g_name" name="g_name" placeholder="이름" maxlength="5">
+				</div>
+
+				<!-- 연락처 -->
+				<div class="input_wrap tel">
+					<span class="tel-prefix">010</span>
+					<input type="hidden" id="g_tel_1" name="g_tel_1" value="010">
+					<span class="dash">-</span>
+					<input type="tel" id="g_tel_2" name="g_tel_2" placeholder="앞4자리" maxlength="4" inputmode="numeric">
+					<span class="dash">-</span>
+					<input type="tel" id="g_tel_3" name="g_tel_3" placeholder="뒷4자리" maxlength="4" inputmode="numeric">
+				</div>
+
+				<div class="divider"></div>
+
+				<!-- 생년월일 -->
+				<div class="input_wrap6">
+					<input type="tel" id="g_age" name="g_age" placeholder="생년월일(예:19800101)" maxlength="8" inputmode="numeric">
+				</div>
+
+				<!-- 성별 -->
+				<div class="input_wrap6">
+					<div class="gender-selector">
+						<button type="button" class="gender-btn" data-gender="남">남성</button>
+						<button type="button" class="gender-btn" data-gender="여">여성</button>
+					</div>
+					<input type="hidden" id="g_gender" name="g_gender" value="">
+				</div>
+
+				<!-- 관계(대리신청) -->
+				<div class="input_wrap7">
+					<p class="proxy-desc">본인이 아닌 [대리신청]시 선택해 주세요.</p>
+					<select id="g_member_cd" name="g_member_cd">
+						<option value="본인">나는 [본인] 입니다.</option>
+						<option value="배우자">나는 [배우자] 입니다.</option>
+						<option value="친정부모">나는 [친정부모] 입니다.</option>
+						<option value="시부모">나는 [시부모] 입니다.</option>
+						<option value="조부모">나는 [조부모] 입니다.</option>
+						<option value="자녀">나는 [자녀] 입니다.</option>
+						<option value="지인">나는 [지인] 입니다.</option>
+						<option value="그 외">나는 [그 외] 입니다.</option>
+					</select>
+				</div>
+
+				<!-- 동의 -->
+				<div class="input_wrap4">
+					<div class="input_wrap5">
+						<label>
+							<input type="checkbox" id="agree_required" value="필수">
+							<span class="comment1">(필수) 개인정보 제3자 제공 동의</span>
+						</label>
+						<a class="view-terms" data-terms="privacy"><span class="comment1">[보기]</span></a>
+					</div>
+					<div class="input_wrap5">
+						<label>
+							<input type="checkbox" id="agree_marketing" value="선택">
+							<span class="comment1">(선택) 광고성 정보수신 동의</span>
+						</label>
+						<a class="view-terms" data-terms="marketing"><span class="comment1">[보기]</span></a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="submit-wrap">
+				<img src="img/btn_submit.gif" id="submitBtn" alt="예상견적 즉시받기 (무료)">
+			</div>
+
+		</form>
+	</section>
+
+	<!-- ===== 푸터 ===== -->
+	<footer class="site-footer">
+
+		<div class="channel">
+			<img class="channel__logo" src="img/logo_emblem.png" alt="보답하는 유니">
+
+			<p class="channel__intro">
+				현직 보험대리점 본부장이자 한 아이를 키우는 <b>엄마 설계사</b>로,<br>
+				태아보험부터 어린이보험, 성인보험까지<br>
+				실제 사례와 노하우를 바탕으로 쉽게 풀어드립니다.
+			</p>
+
+			<p class="channel__belief">
+				보험은 단순히 가입이 아니라, <b>사고 이후까지 관리</b>가 중요하다고 믿습니다.
+			</p>
+
+			<ul class="channel__topics">
+				<li>태아보험 · 어린이보험 비교 &amp; 추천</li>
+				<li>보험금 청구 사례</li>
+				<li>연금 · 유병자보험 등 실전형 보험 정보</li>
+			</ul>
+
+			<ul class="channel__stats">
+				<li><b>6.74천</b><span>구독자</span></li>
+				<li><b>220</b><span>동영상</span></li>
+				<li><b>109만</b><span>조회수</span></li>
+			</ul>
+
+			<div class="channel__links">
+				<a class="link link--kakao" href="http://pf.kakao.com/_qxhjxgK" target="_blank" rel="noopener">카카오톡 상담</a>
+				<a class="link" href="https://www.youtube.com/@insure_yoon" target="_blank" rel="noopener">유튜브 채널</a>
+				<a class="link" href="https://blog.naver.com/jyoon9028" target="_blank" rel="noopener">블로그</a>
+			</div>
+
+			<p class="channel__tel">
+				상담 &amp; 제안 문의 <a href="tel:01055158292">010-5515-8292</a>
+			</p>
+		</div>
+
+		<div class="biz">
+			<p class="biz__name">보답하는 유니 &nbsp;|&nbsp; 대표 김재윤</p>
+			<p>사업자등록번호 646-70-00508</p>
+			<p class="biz__note">
+				본 페이지는 보험 상품 비교·상담 신청을 위한 안내 페이지이며, 보험 계약 체결 페이지가 아닙니다.<br>
+				보장 내용 및 보험료는 보험사·상품·피보험자 조건에 따라 달라질 수 있으므로,
+				가입 전 반드시 해당 약관과 상품설명서를 확인하시기 바랍니다.
+			</p>
+			<p class="biz__copy">© 보답하는 유니. All rights reserved.</p>
+		</div>
+
+	</footer>
+
+</div>
+
+<!-- ===== 약관 팝업 ===== -->
+<div class="modal-backdrop" id="modalBackdrop"></div>
+<div class="modal" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+	<div class="modal-head">
+		<h2 id="termsTitle">개인정보 제3자 제공 동의</h2>
+		<button type="button" class="modal-close" aria-label="닫기">&times;</button>
+	</div>
+	<div class="modal-body" id="termsBody"></div>
+	<div class="modal-foot">
+		<button type="button" class="modal-agree">동의하고 닫기</button>
+	</div>
+</div>
+
+<!-- ===== 하단 고정 CTA ===== -->
+<div class="sticky-cta" id="stickyCta">
+	<button type="button">지금 무료로 견적받기</button>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

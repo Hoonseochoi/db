@@ -1,0 +1,7 @@
+.DS_Store
+.claude/
+
+# YPLAN 원본에서 받아온 광고 소재 — 레이아웃 확인용 플레이스홀더라 저장소에 올리지 않음.
+# 자체 제작 소재로 교체 후, 아래 규칙을 지우고 커밋하세요.
+img/cancer_*.jpg
+img/btn_submit.gif
